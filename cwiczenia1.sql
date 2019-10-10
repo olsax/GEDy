@@ -1,6 +1,6 @@
 -- ZAPYTANIA AGREGUJĄCE SQL
 
-	   [Sem] - semestr
+	  [Sem] - semestr
       ,[sym] - symbol przedmiotu
       ,[p ]  - poziom (rok) studiów
       ,[s ]  - specjalność (M- matematyka, I - informatyka)
@@ -79,9 +79,9 @@ FROM PlanWMI
 GROUp BY imie, nazwisko, [nazwa  przedmiotu], left(sem, 4);
 
 -- zad 5c
-SELECT [nazwa  przedmiotu                                    ], sum(godzin) as 'Liczba godzin', imie, nazwisko, sem
+SELECT [nazwa  przedmiotu], sum(godzin) as 'Liczba godzin', imie, nazwisko, sem
 FROM PlanWMI
-GROUp BY imie, nazwisko, [nazwa  przedmiotu                                    ], sem;
+GROUp BY imie, nazwisko, [nazwa  przedmiotu], sem;
 
 -- zad 5d
 SELECT [nazwa  przedmiotu], sum(godzin) as 'Liczba godzin', imie, nazwisko, sem, f
